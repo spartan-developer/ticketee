@@ -30,7 +30,12 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+group :test, :development do
+  gem 'rspec-rails', '2.7.0'
+end
+
 group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
+  gem 'cucumber-rails', '1.2.1'
+  gem 'capybara', '1.1.2'
+  gem 'database_cleaner', '0.7.1'
 end
